@@ -1,0 +1,48 @@
+{
+  "name": "the-snap",
+  "version": "1.0.0",
+  "description": "Screen shot API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js | pino-pretty -c -l",
+    "start": "node src/server.js",
+    "doc": "apidoc -i src/ -o doc/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrkaatz/the-snap.git"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrkaatz/the-snap/issues"
+  },
+  "apidoc": {
+    "title": "Custom apiDoc browser title",
+    "url": "https://api.github.com/v1"
+  },
+  "homepage": "https://github.com/chrkaatz/the-snap#readme",
+  "dependencies": {
+    "ajv": "^7.0.3",
+    "ajv-formats": "^1.5.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-https-redirect": "^1.0.0",
+    "express-rate-limit": "^5.2.3",
+    "helmet": "^4.3.1",
+    "pino": "^6.9.0",
+    "puppeteer": "^5.5.0"
+  },
+  "devDependencies": {
+    "apidoc": "^0.25.0",
+    "nodemon": "^2.0.6",
+    "pino-pretty": "^4.3.0",
+    "prettier": "^2.2.1"
+  }
+}
