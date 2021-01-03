@@ -40,9 +40,9 @@
     "puppeteer": "^5.5.0"
   },
   "devDependencies": {
-    "apidoc": "^0.25.0",
-    "nodemon": "^2.0.6",
-    "pino-pretty": "^4.3.0",
-    "prettier": "^2.2.1"
+    "apidoc": "0.25.0",
+    "nodemon": "2.0.6",
+    "pino-pretty": "4.3.0",
+    "prettier": "2.2.1"
   }
 }
