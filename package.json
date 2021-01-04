@@ -8,7 +8,7 @@
     "dev": "nodemon src/server.js | pino-pretty -c -l",
     "start": "node src/server.js",
     "doc": "apidoc -i src/ -o doc/",
-    "postinstall": "is-ci || husky install"
+    "postinstall": "[ -d \".git\" ] && husky install"
   },
   "repository": {
     "type": "git",
