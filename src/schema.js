@@ -1,7 +1,6 @@
 const screenshotSchema = {
   title: 'Page screenshot',
   description: 'Take screenshot of a page',
-  additionalProperties: false,
   type: 'object',
   properties: {
     url: {
