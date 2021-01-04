@@ -20,7 +20,7 @@
             "type": "String",
             "optional": true,
             "field": "selector",
-            "description": "<p>take a screenshot of a given selector</p>"
+            "description": "<p>take a screenshot of a given selector - encoded URI component</p>"
           }
         ]
       }

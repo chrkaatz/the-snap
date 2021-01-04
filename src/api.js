@@ -15,7 +15,7 @@ const { shot, pdf } = require('./shot.js');
  * @apiGroup Screenshots
  *
  * @apiParam {String} url a url to be looked up
- * @apiParam {String} [selector] take a screenshot of a given selector
+ * @apiParam {String} [selector] take a screenshot of a given selector - encoded URI component
  *
  * @apiSuccess {File} image the generated screenshot
  * @apiError {Object} Errors returned errors
@@ -27,8 +27,11 @@ router.get('/shot', async (req, res) => {
     const errors = await parseAJVErrors(validate.errors);
     return res.status(400).json({ errors });
   }
-  const { url } = req.query;
-  const buffer = await shot({ url });
+  const { url, selector } = req.query;
+  let decodedSelector = selector ? decodeURIComponent(selector) : false;
+  if (selector) {
+  }
+  const buffer = await shot({ url, selector: decodedSelector });
   if (buffer) {
     const img = Buffer.from(buffer, 'base64');
     res.writeHead(200, {

@@ -11,6 +11,11 @@ const screenshotSchema = {
       minLength: 1,
       maxLength: 255,
     },
+    selector: {
+      type: 'string',
+      minLength: 1,
+      maxLength: 255,
+    },
   },
   required: ['url'],
 };
