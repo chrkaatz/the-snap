@@ -1,5 +1,6 @@
 const express = require('express');
 const logger = require('pino')();
+const path = require('path');
 const httpsRedirect = require('express-https-redirect');
 const helmet = require('helmet');
 const cors = require('cors');
@@ -16,9 +17,12 @@ if (USE_HTTPS) {
   app.use('/', httpsRedirect());
 }
 app.use(cors());
+app.use('/docs', express.static(path.join(__dirname, '..', 'doc')));
 app.use(helmet());
+app.get('/.well-known/health', (req, res) =>
+  res.status(200).json({ status: 'healthy' }),
+);
 app.use(rateLimit());
-app.get('/health', (req, res) => res.status(200).json({ status: 'healthy' }));
 
 app.use('/api', api);
 

@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server.js | pino-pretty -c -l",
     "start": "node src/server.js",
-    "doc": "apidoc -i src/ -o doc/"
+    "doc": "apidoc -i src/ -o doc/",
+    "postinstall": "husky install"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,8 @@
     "url": "https://github.com/chrkaatz/the-snap/issues"
   },
   "apidoc": {
-    "title": "Custom apiDoc browser title",
-    "url": "https://api.github.com/v1"
+    "title": "The Snap Documentation",
+    "url": "https://the-snap.herokuapp.com/api"
   },
   "homepage": "https://github.com/chrkaatz/the-snap#readme",
   "dependencies": {
@@ -41,6 +42,7 @@
   },
   "devDependencies": {
     "apidoc": "0.25.0",
+    "husky": "^5.0.6",
     "nodemon": "2.0.6",
     "pino-pretty": "4.3.0",
     "prettier": "2.2.1"

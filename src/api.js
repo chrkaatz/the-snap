@@ -10,12 +10,50 @@ const { screenshotSchema } = require('./schema');
 const { shot, pdf } = require('./shot.js');
 
 /**
- * @api {get} /api/shot get a screenshot of a page
+ * @api {get} /shot get a screenshot of a page
  * @apiName TakeScreenshot
  * @apiGroup Screenshots
  *
+ * @apiParam {String} url a url to be looked up
+ * @apiParam {String} [selector] take a screenshot of a given selector
+ *
+ * @apiSuccess {File} image the generated screenshot
+ * @apiError {Object} Errors returned errors
  */
 router.get('/shot', async (req, res) => {
+  const validate = ajv.compile(screenshotSchema);
+  const result = await validate(req.query);
+  if (!result) {
+    const errors = await parseAJVErrors(validate.errors);
+    return res.status(400).json({ errors });
+  }
+  const { url } = req.query;
+  const buffer = await shot({ url });
+  if (buffer) {
+    const img = Buffer.from(buffer, 'base64');
+    res.writeHead(200, {
+      'Content-Type': 'image/png',
+      'Content-Length': img.length,
+    });
+
+    res.end(img);
+  } else {
+    res.status(400).json({ message: 'Bad Request' });
+  }
+});
+
+/**
+ * @api {get} /pdf get a pdf of a page
+ * @apiName TakeScreenshot
+ * @apiGroup Screenshots
+ *
+ * @apiParam {String} url a url to be looked up
+ * @apiParam {String} [selector] take a screenshot of a given selector
+ *
+ * @apiSuccess {File} image the generated screenshot
+ * @apiError {Object} Errors returned errors
+ */
+router.get('/pdf', async (req, res) => {
   const validate = ajv.compile(screenshotSchema);
   const result = await validate(req.query);
   if (!result) {
