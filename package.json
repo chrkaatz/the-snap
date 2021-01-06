@@ -43,7 +43,7 @@
   "devDependencies": {
     "apidoc": "0.26.0",
     "husky": "5.0.6",
-    "nodemon": "2.0.6",
+    "nodemon": "2.0.7",
     "pino-pretty": "4.3.0",
     "prettier": "2.2.1"
   }
