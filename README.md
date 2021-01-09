@@ -1,8 +1,21 @@
 ![Logo](logo.png)
 
 # the-snap
-Screen shot API
 
+A simple API to create screenshots and PDFs from websites
+
+## Usage
+
+```bash
+$ npm install
+$ npm run start
+```
+
+Or you can easily spin up a docker container
+
+```bash
+$ docker run -it --rm -p 3000:3000 chrkaatz/the-snap
+```
 
 ## Deployment
 
