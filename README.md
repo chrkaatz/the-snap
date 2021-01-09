@@ -1,4 +1,4 @@
-![Logo](logo.png)
+![Logo](https://github.com/chrkaatz/the-snap/raw/main/logo.png)
 
 # the-snap
 
