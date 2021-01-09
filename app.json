@@ -1,0 +1,21 @@
+{
+    "name": "The Snap",
+    "description": "A simple service to obtain screenshots and PDFs from pages",
+    "repository": "https://github.com/chrkaatz/the-snap",
+    "logo": "https://github.com/chrkaatz/the-snap/blob/main/logo.png",
+    "keywords": ["node", "puppeteer", "screenshot", "api", "pdf"],
+    "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+          "url": "https://buildpack-registry.s3.amazonaws.com/buildpacks/jontewks/puppeteer.tgz"
+        }
+    ],
+    "env": {
+        "HUSKY": {
+            "description": "Disable git hooks managed by husky",
+            "value": 0
+        }
+    }
+  }
