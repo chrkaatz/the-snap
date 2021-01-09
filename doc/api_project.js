@@ -1,15 +1,15 @@
 define({
+  "name": "The Snap Documentation",
   "title": "The Snap Documentation",
   "url": "https://the-snap.herokuapp.com/api",
-  "name": "the-snap",
+  "description": "A simple service to create screenshots and PDFs from unauthenticated accessible websites",
   "version": "1.0.0",
-  "description": "Screen shot API",
   "sampleUrl": false,
   "defaultVersion": "0.0.0",
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2021-01-04T20:54:26.815Z",
+    "time": "2021-01-09T10:02:25.329Z",
     "url": "https://apidocjs.com",
     "version": "0.25.0"
   }

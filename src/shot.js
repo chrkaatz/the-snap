@@ -42,7 +42,7 @@ function shot({ url, selector = false, format = 'png' }) {
   });
 }
 
-function pdf({ url }) {
+function pdf({ url, width = false, height = false }) {
   return new Promise((resolve, reject) => {
     (async () => {
       try {
@@ -51,6 +51,9 @@ function pdf({ url }) {
         });
 
         const page = await browser.newPage();
+        if (width && height) {
+          await page.setViewport({ width, height });
+        }
 
         await page.goto(url, {
           waitUntil: ['load', 'networkidle0', 'domcontentloaded'],
@@ -58,9 +61,13 @@ function pdf({ url }) {
 
         await page.waitForTimeout(1000);
 
-        await page.emulateMediaType('screen');
+        await page.emulateMediaType('print');
 
-        const pdf = await page.pdf({ format: 'A4' });
+        const pdf = await page.pdf({
+          format: 'A4',
+          format: 'A4',
+          printBackground: true,
+        });
         await browser.close();
 
         resolve(pdf);

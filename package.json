@@ -24,8 +24,10 @@
     "url": "https://github.com/chrkaatz/the-snap/issues"
   },
   "apidoc": {
+    "name": "The Snap Documentation",
     "title": "The Snap Documentation",
-    "url": "https://the-snap.herokuapp.com/api"
+    "url": "https://the-snap.herokuapp.com/api",
+    "description": "A simple service to create screenshots and PDFs from unauthenticated accessible websites"
   },
   "homepage": "https://github.com/chrkaatz/the-snap#readme",
   "dependencies": {
