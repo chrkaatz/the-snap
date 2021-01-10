@@ -15,7 +15,7 @@
     "env": {
         "HUSKY": {
             "description": "Disable git hooks managed by husky",
-            "value": 0
+            "value": "0"
         }
     }
   }
