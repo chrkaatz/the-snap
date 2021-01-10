@@ -2,7 +2,7 @@
     "name": "The Snap",
     "description": "A simple service to obtain screenshots and PDFs from pages",
     "repository": "https://github.com/chrkaatz/the-snap",
-    "logo": "https://github.com/chrkaatz/the-snap/blob/main/logo.png",
+    "logo": "https://github.com/chrkaatz/the-snap/raw/main/logo.png",
     "keywords": ["node", "puppeteer", "screenshot", "api", "pdf"],
     "buildpacks": [
         {
