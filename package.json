@@ -4,7 +4,7 @@
   "description": "Screen shot API",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ava --verbose",
     "dev": "nodemon src/server.js | pino-pretty -c -l",
     "start": "node src/server.js",
     "doc": "apidoc -i src/ -o doc/",
@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "apidoc": "0.26.0",
+    "ava": "^3.15.0",
     "husky": "5.0.6",
     "nodemon": "2.0.7",
     "pino-pretty": "4.3.0",
