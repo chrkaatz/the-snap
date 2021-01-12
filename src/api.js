@@ -7,7 +7,7 @@ require('ajv-formats')(ajv);
 
 const { parseAJVErrors, deviceViewport } = require('./util');
 const { screenshotSchema, pdfSchema } = require('./schema');
-const { shot, pdf } = require('./shot.js');
+const { shot, pdf } = require('./capture.js');
 
 /**
  * @api {get} /shot get a screenshot of a page
