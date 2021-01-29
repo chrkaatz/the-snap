@@ -18,8 +18,8 @@
     "node": "14.x"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Christian Kaatz",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/chrkaatz/the-snap/issues"
   },
