@@ -30,9 +30,9 @@ router.get('/shot', async (req, res) => {
   }
   const { url, selector } = req.query;
   let decodedSelector = selector ? decodeURIComponent(selector) : false;
-  if (selector) {
-  }
-  const buffer = await shot({ url, selector: decodedSelector });
+  const buffer = decodedSelector
+    ? await shot({ url, selector: decodedSelector })
+    : await shot({ url });
   if (buffer) {
     const img = Buffer.from(buffer, 'base64');
     res.writeHead(200, {
