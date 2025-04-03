@@ -32,7 +32,7 @@
   "homepage": "https://github.com/chrkaatz/the-snap#readme",
   "dependencies": {
     "ajv": "^8.0.0",
-    "ajv-formats": "^2.0.0",
+    "ajv-formats": "^3.0.0",
     "body-parser": "^2.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
