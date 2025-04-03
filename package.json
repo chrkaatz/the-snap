@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "apidoc": "1.2.0",
-    "ava": "3.15.0",
+    "ava": "6.2.0",
     "husky": "7.0.1",
     "nodemon": "2.0.12",
     "pino-pretty": "7.0.0",
